@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon S3 - Armazenamento em Nuvem</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Fundo animado suave */
+    .animated-bg {
+      background: linear-gradient(270deg, #8b5cf6, #6366f1, #3b82f6, #06b6d4);
+      background-size: 600% 600%;
+      animation: gradientShift 14s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hover-zoom {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .hover-zoom:hover {
+      transform: scale(1.04);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800 bg-gray-50">
+
+  
+  <section class="animated-bg py-20 px-8 md:px-24 flex flex-col items-center justify-center text-center text-white">
+    <h1 data-aos="fade-down" class="text-5xl font-semibold mb-6">Amazon S3</h1>
+    <p data-aos="fade-up" class="max-w-2xl text-lg opacity-90 mb-6">
+      Armazenamento de objetos criado para guardar e recuperar qualquer quantidade de dados, com escalabilidade e segurança incomparáveis.
+    </p>
+    <div data-aos="zoom-in">
+      <i class="ph-cloud-arrow-up text-7xl"></i>
+    </div>
+  </section>
+
+  <!-- O QUE É O AMAZON S3 -->
+  <section class="bg-white py-20 px-8 md:px-24 flex flex-col md:flex-row items-center gap-12">
+    <div data-aos="fade-right" class="flex-1">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-700">O que é o Amazon S3?</h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        O Amazon Simple Storage Service (S3) é uma solução confiável e escalável para armazenar e acessar dados de qualquer lugar.
+        Ideal para empresas e desenvolvedores que buscam segurança, desempenho e controle total sobre seus dados.
+      </p>
+      <div class="flex items-center gap-3 text-indigo-700">
+        <i class="ph-lock-key text-2xl"></i>
+        <span class="font-medium">Segurança e controle avançado</span>
+      </div>
+    </div>
+    <img data-aos="fade-left" src="img/s3-overview.png" alt="Amazon S3 Overview" class="w-80 rounded-lg shadow-md hover-zoom">
+  </section>
+
+  <!-- ESCALABILIDADE -->
+  <section class="bg-indigo-50 py-20 px-8 md:px-24 flex flex-col md:flex-row-reverse items-center gap-12">
+    <div data-aos="fade-left" class="flex-1">
+      <h2 class="text-3xl font-semibold mb-4 text-indigo-600">Escalabilidade</h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Armazene desde alguns megabytes até exabytes de dados com desempenho estável e elasticidade total. 
+        O S3 cresce e se ajusta automaticamente às suas necessidades, sem configuração manual.
+      </p>
+      <div class="flex items-center gap-3 text-indigo-600">
+        <i class="ph-trend-up text-2xl"></i>
+        <span class="font-medium">Expansão sob demanda</span>
+      </div>
+    </div>
+    <img data-aos="fade-right" src="img/escalabilidade.png" alt="Escalabilidade S3" class="w-72 rounded-lg shadow-md hover-zoom">
+  </section>
+
+  <!-- DURABILIDADE -->
+  <section class="bg-white py-20 px-8 md:px-24 flex flex-col md:flex-row items-center gap-12">
+    <div data-aos="fade-right" class="flex-1">
+      <h2 class="text-3xl font-semibold mb-4 text-blue-700">Durabilidade e Disponibilidade</h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        O Amazon S3 garante 99,999999999% de durabilidade e 99,99% de disponibilidade dos dados. 
+        Uma infraestrutura projetada para manter suas informações seguras e sempre acessíveis.
+      </p>
+      <div class="flex items-center gap-3 text-blue-700">
+        <i class="ph-shield-check text-2xl"></i>
+        <span class="font-medium">Alta confiabilidade</span>
+      </div>
+    </div>
+    <img data-aos="fade-left" src="img/durabilidade.png" alt="Durabilidade S3" class="w-72 rounded-lg shadow-md hover-zoom">
+  </section>
+
+  <!-- SEGURANÇA -->
+  <section class="bg-blue-50 py-20 px-8 md:px-24 flex flex-col md:flex-row-reverse items-center gap-12">
+    <div data-aos="fade-left" class="flex-1">
+      <h2 class="text-3xl font-semibold mb-4 text-blue-600">Segurança e Proteção de Dados</h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        Seus dados são criptografados por padrão e protegidos com múltiplas camadas de segurança e auditoria.
+        O S3 mantém seus dados privados e sob total controle.
+      </p>
+      <div class="flex items-center gap-3 text-blue-600">
+        <i class="ph-lock text-2xl"></i>
+        <span class="font-medium">Criptografia total</span>
+      </div>
+    </div>
+    <img data-aos="fade-right" src="img/security.png" alt="Segurança S3" class="w-72 rounded-lg shadow-md hover-zoom">
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="bg-gray-900 py-20 px-8 md:px-24 flex flex-col md:flex-row items-center gap-12 text-white">
+    <div data-aos="fade-right" class="flex-1">
+      <h2 class="text-3xl font-semibold mb-4 text-amber-400">Preço e Performance</h2>
+      <p class="text-gray-300 leading-relaxed mb-6">
+        O S3 oferece diversas classes de armazenamento e automação de ciclo de vida, garantindo a melhor combinação entre custo e desempenho. 
+        Ideal para workloads de alta performance e grande volume de dados.
+      </p>
+      <div class="flex items-center gap-3 text-amber-400">
+        <i class="ph-coins text-2xl"></i>
+        <span class="font-medium">Melhor custo-benefício</span>
+      </div>
+    </div>
+    <img data-aos="fade-left" src="img/performance.png" alt="Performance S3" class="w-72 rounded-lg shadow-md hover-zoom">
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="animated-bg text-center py-8 text-gray-100 flex justify-center items-center space-x-3">
+    © 2025 - Projeto Educacional AWS | Criado por @Heberton Geovane
+    <a
+        href="https://www.linkedin.com/in/heberton-geovane/"
+        target="_blank"
+        class="text-gray-400 linkedin-icon"
+      >
+        <i class="ph ph-linkedin-logo text-2xl"></i>
+      </a>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true,
+      offset: 100,
+    });
+  </script>
+</body>
+</html>
