@@ -1,0 +1,23 @@
+# Credenciais e arquivos sensíveis
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+.aws/
+
+# Terraform (futuros laboratórios)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+# Arquivos locais
+.vscode/
+.DS_Store
+Thumbs.db
